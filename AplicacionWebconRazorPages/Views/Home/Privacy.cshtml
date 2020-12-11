@@ -1,6 +1,24 @@
-﻿@{
-    ViewData["Title"] = "Procedimiento en base de datos";
-}
-<h1>@ViewData["Title"]</h1>
+﻿@model IEnumerable<AplicacionWebconRazorPages.Models.AspNetUser>
+
+<table class= "table table-dark">
+    <tr>
+        <th>
+            Username
+        </th>
+        <th>
+            Numero Telefonico
+        </th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+        </tr>
+    }
 
 
